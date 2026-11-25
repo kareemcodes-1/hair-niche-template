@@ -4,6 +4,7 @@ import PixelRevealImage from '@/app/helpers/pixelated-image';
 import { priceFormatter } from '@/lib/priceFormatter';
 import React from 'react';
 import { ShoppingCart } from 'lucide-react';
+import Image from 'next/image';
 
 const ProductCard = ({ item }: { item: any }) => {
   const handleAddToCart = (e: React.MouseEvent) => {
@@ -17,13 +18,17 @@ const ProductCard = ({ item }: { item: any }) => {
       className="group flex flex-col w-full"
     >
       {/* Image */}
-      <div className="bg-[#f6f6f4] rounded-[12px] sm:rounded-[16px] aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/4] overflow-hidden">
-        <PixelRevealImage
-          className="relative h-full w-full rounded-[12px] sm:rounded-[16px] object-cover"
-          src={item.imageUrl || item.img}
-          alt={item.name}
-        />
-      </div>
+      <div className="relative bg-[#f6f6f4] rounded-[12px] sm:rounded-[16px] aspect-[3/4] sm:aspect-[4/5] lg:aspect-square overflow-hidden">
+  <Image
+    src={item.imageUrl || item.img}
+    alt={item.name || 'Product'}
+    fill
+    quality={90}
+    priority
+    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+    className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+  />
+</div>
 
       {/* Info */}
       <div className="mt-3 sm:mt-4 flex items-start justify-between gap-2 sm:gap-3">

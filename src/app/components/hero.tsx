@@ -37,7 +37,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
 
       <div className="absolute bottom-0 left-0 z-20 w-full px-6 pb-10 sm:px-8 sm:pb-12 md:px-10 md:pb-14 lg:px-12 lg:pb-16">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between lg:gap-12 xl:gap-16">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between lg:gap-12 xl:gap-16">
           <SplitLines
             text={hero.title}
             tag="h1"
