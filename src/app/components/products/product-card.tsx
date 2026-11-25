@@ -17,7 +17,7 @@ const ProductCard = ({ item }: { item: any }) => {
       className="group flex flex-col w-full"
     >
       {/* Image */}
-      <div className="bg-[#f6f6f4] rounded-[12px] sm:rounded-[16px] aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
+      <div className="bg-[#f6f6f4] rounded-[12px] sm:rounded-[16px] aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/4] overflow-hidden">
         <PixelRevealImage
           className="relative h-full w-full rounded-[12px] sm:rounded-[16px] object-cover"
           src={item.imageUrl || item.img}
